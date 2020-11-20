@@ -75,15 +75,9 @@ router.delete('/:id', (req, res) => {
 });
 
 // Endpoint: /restaurants/statistics?latitude=x&longitude=y&radius=z
-///:latitude
 router.get('/statistics', (req, res) => {
-    const { latitude } = req.body;
-    console.log(latitude);
-    res.json({latitude: latitude});
-/*
     const { latitude, longitude, radius } = req.body;
     console.log(latitude, longitude, radius);
-    res.json({latitude: latitude, longitude: longitude, radius: radius});
 
     //mysqlConnection.query('SELECT * FROM restaurants WHERE lat = ? ', [latitude], (err, rows, fields) => {
     mysqlConnection.query('SELECT * FROM restaurants', (err, rows, fields) => {
@@ -92,8 +86,8 @@ router.get('/statistics', (req, res) => {
       } else {
         console.log(err);
       }
-    });  
-*/
+    }); 
+  
 });
 
 module.exports = router;
