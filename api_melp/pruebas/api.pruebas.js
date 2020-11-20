@@ -1,7 +1,7 @@
 const request = require('supertest')
 const app = require('../src/index')
 
-/* prueba de get all productos endpoint */
+/* probando endpoints */
 describe("GET /v1/restaurants/", () => {
     it('responde con json contenido de la lista de restaurantes', done => {
         request(app)
